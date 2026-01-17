@@ -3,7 +3,7 @@
 import { SignedIn, SignedOut, UserButton, useClerk } from "@clerk/nextjs";
 import { useState } from "react";
 import LandingPage from "./components/LandingPage";
-import FaceDetectionComponent from "./components/FaceDetection";
+import Interview from "./components/Interview";
 
 export default function Home() {
   const { openSignIn } = useClerk();
@@ -28,7 +28,7 @@ export default function Home() {
                 Start Interview
               </button>
             ) : (
-              <FaceDetectionComponent onEndInterview={() => setInterviewStarted(false)} />
+              <Interview onEndInterview={() => setInterviewStarted(false)} />
             )}
           </main>
         </div>
